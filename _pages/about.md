@@ -17,3 +17,9 @@ Research Interests
 - Distributed Optimization
 
 My research focuses on the development, analysis, and implementation of stochastic and distributed optimization algorithms for problems in machine learning, deep learning, operations research, and engineering, aiming to bridge theoretical advances with practical solutions. In stochastic optimization, I study continuous-time perspectives (ODEs/SDEs) to analyze and design modern optimization algorithms. In distributed optimization, I am interested in efficient methods beyond standard consensus protocols. I am also interested in optimization in non-Euclidean geometries.
+
+
+Contact Me
+======
+ding433@purdue.edu
+kuangyud@u.nus.edu
