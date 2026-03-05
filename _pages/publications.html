@@ -11,26 +11,67 @@ author_profile: true
 
 {% include base_path %}
 
-<!-- New style rendering if publication categories are defined -->
-{% if site.publication_category %}
-  {% for category in site.publication_category  %}
-    {% assign title_shown = false %}
-    {% for post in site.publications reversed %}
-      {% if post.category != category[0] %}
-        {% continue %}
-      {% endif %}
-      {% unless title_shown %}
-        <h2>{{ category[1].title }}</h2><hr />
-        {% assign title_shown = true %}
-      {% endunless %}
-      {% include archive-single.html %}
+<p><em>* corresponding author</em></p>
+
+{% assign preprints = site.publications | where: "category", "preprints" | sort: "date" | reverse %}
+{% assign journals = site.publications | where: "category", "manuscripts" | sort: "date" | reverse %}
+{% assign conferences = site.publications | where: "category", "conferences" | sort: "date" | reverse %}
+
+{% if preprints.size > 0 %}
+  <h2>Preprints</h2>
+  <ol>
+    {% for post in preprints %}
+      <li>
+        {{ post.authors }}. {{ post.title }}. {{ post.date | date: "%Y" }}.
+        [
+        {% assign first_link = true %}
+        {% if post.arxivurl %}
+          <a href="{{ post.arxivurl }}">arXiv</a>
+          {% assign first_link = false %}
+        {% endif %}
+        {% if post.paperurl %}
+          {% unless first_link %}, {% endunless %}
+          <a href="{{ post.paperurl }}">{{ post.paperlabel | default: "Paper" }}</a>
+          {% assign first_link = false %}
+        {% endif %}
+        {% if post.codeurl %}
+          {% unless first_link %}, {% endunless %}
+          <a href="{{ post.codeurl }}">Code</a>
+        {% endif %}
+        ]
+      </li>
     {% endfor %}
-  {% endfor %}
-{% else %}
-  {% for post in site.publications reversed %}
-    {% include archive-single.html %}
-  {% endfor %}
+  </ol>
 {% endif %}
 
+{% if journals.size > 0 %}
+  <h2>Journal Publications</h2>
+  <ol>
+    {% for post in journals %}
+      <li>
+        {{ post.authors }}. {{ post.title }}. {{ post.venue }}, {{ post.date | date: "%Y" }}.
+        [
+        <a href="{{ post.paperurl }}">{{ post.paperlabel | default: "Paper" }}</a>
+        {% if post.note %}, {{ post.note }}{% endif %}
+        ]
+      </li>
+    {% endfor %}
+  </ol>
+{% endif %}
+
+{% if conferences.size > 0 %}
+  <h2>Conference Publications</h2>
+  <ol>
+    {% for post in conferences %}
+      <li>
+        {{ post.authors }}. {{ post.title }}. {{ post.venue }}, {{ post.date | date: "%Y" }}.
+        [
+        <a href="{{ post.paperurl }}">{{ post.paperlabel | default: "Paper" }}</a>
+        {% if post.note %}, {{ post.note }}{% endif %}
+        ]
+      </li>
+    {% endfor %}
+  </ol>
+{% endif %}
 
 

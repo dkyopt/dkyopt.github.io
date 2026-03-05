@@ -44,6 +44,9 @@ Skills
 Publications
 ======
   <ul>{% for post in site.publications reversed %}
+    {% if post.category == "preprints" %}
+      {% continue %}
+    {% endif %}
     {% include archive-single-cv.html %}
   {% endfor %}</ul>
   

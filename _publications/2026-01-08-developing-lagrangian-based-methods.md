@@ -5,7 +5,9 @@ category: manuscripts
 permalink: /publication/2026-01-08-developing-lagrangian-based-methods
 date: 2026-01-08
 venue: "Mathematics of Operations Research"
+authors: "Nachuan Xiao, Kuangyu Ding*, Xiaoyin Hu, Kim-Chuan Toh"
 paperurl: "https://pubsonline.informs.org/doi/abs/10.1287/moor.2024.0479"
+paperlabel: "MOOR"
 citation: 'Xiao, N., Ding, K., Hu, X., & Toh, K.-C. (2026). "Developing Lagrangian-based methods for nonsmooth nonconvex optimization." <i>Mathematics of Operations Research</i>.'
 excerpt: "Published version in Mathematics of Operations Research."
 ---
