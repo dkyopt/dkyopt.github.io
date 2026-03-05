@@ -5,7 +5,7 @@ category: conferences
 permalink: /publication/2022-01-01-dimension-reduced-adaptive-gradient-method
 date: 2022-01-01
 venue: "OPT 2022 Workshop (Optimization for Machine Learning)"
-authors: "Jingyang Li, Pan Zhou, Kuangyu Ding*, Kim-Chuan Toh, Yinyu Ye"
+authors: "Jingyang Li, Pan Zhou, Kuangyu Ding, Kim-Chuan Toh*, Yinyu Ye*"
 paperurl: "https://openreview.net/forum?id=Xp-__WzXiBy"
 paperlabel: "Workshop"
 note: "Workshop paper"
