@@ -11,11 +11,8 @@ main:
   - title: "Publications"
     url: /publications/
 
-  - title: "Invited Talks"
+  - title: "Talks & Teaching"
     url: /talks/
-
-  - title: "Teaching"
-    url: /teaching/
     
   # - title: "Portfolio"
   #   url: /portfolio/
