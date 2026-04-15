@@ -24,3 +24,7 @@ Contact Me
 ding433@purdue.edu
 
 kuangyud@u.nus.edu
+
+Visitor Map
+======
+{% include visitor-map.html %}
