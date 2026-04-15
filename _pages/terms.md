@@ -40,6 +40,6 @@ Google Analytics is a web analytics tool I use to help understand how visitors e
 
 #### Visitor Map
 
-This site also uses [IP2Map](https://www.ip2map.com/) to record approximate IP-based geolocation for recent visits. A small tracking image is loaded when pages on this site are viewed, and a GitHub Actions workflow periodically rebuilds the public visitor map shown on the homepage from that location data.
+This site also uses [IP2Map](https://www.ip2map.com/) to record approximate IP-based geolocation for recent visits. A small tracking image is loaded when pages on this site are viewed so I can privately review general traffic patterns.
 
-The homepage map is limited to coarse, city-level or country-level location information and visit counts. It is intended to show general traffic patterns only and does not identify individual people.
+The visitor map is not shown publicly on the website. Any review of this data is limited to coarse, city-level or country-level location information and visit counts, and it is intended to show general traffic patterns only rather than identify individual people.
