@@ -155,6 +155,14 @@ analytics:
   google:
     tracking_id          :
 
+visitor_map:
+  enabled                : true
+  provider               : "ip2map"
+  title                  : "Recent Visitors"
+  description            : "Approximate city-level locations of recent visitors. Data refreshes automatically several times per day."
+  data_file              : "/assets/data/visitor-map.json"
+  tracking_pixel_url     : "https://www.ip2map.com/ip2map.gif"
+
 
 # Reading Files
 include:

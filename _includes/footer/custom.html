@@ -16,4 +16,18 @@
     await mermaid.run({querySelector:'code.language-mermaid'});
 </script>
 
+{% if site.visitor_map.enabled %}
+<img
+  src="{{ site.visitor_map.tracking_pixel_url }}"
+  alt=""
+  width="1"
+  height="1"
+  loading="eager"
+  decoding="async"
+  referrerpolicy="strict-origin-when-cross-origin"
+  style="position:absolute;width:1px;height:1px;overflow:hidden;clip-path:inset(50%);border:0;"
+/>
+<script defer src="{{ base_path }}/assets/js/visitor-map.js"></script>
+{% endif %}
+
 <!-- end custom footer snippets -->
